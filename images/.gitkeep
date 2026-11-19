@@ -1,1 +1,1171 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#190b12">
+<meta name="description" content="Một món quà nhỏ chứa đựng tình cảm và lòng biết ơn của tập thể 8C5 gửi đến cô nhân ngày Nhà giáo Việt Nam 20/11/2026.">
+<title>A Letter of Gratitude | 8C5</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --wine: #57182f;
+  --wine-dark: #190b12;
+  --gold: #d7b477;
+  --gold-light: #f5dfad;
+  --cream: #f8eee0;
+  --muted: #c7aeb7;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--wine-dark);
+  color: var(--cream);
+  font-family: 'Be Vietnam Pro', sans-serif;
+  overflow-x: hidden;
+}
+
+button { font: inherit; }
+
+#particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+#petals {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.petal {
+  position: absolute;
+  top: -40px;
+  color: #e8a9b7;
+  opacity: .65;
+  animation: fall linear infinite;
+  filter: drop-shadow(0 0 8px #d58a9b);
+}
+
+@keyframes fall {
+  0% { transform: translate3d(0,-5vh,0) rotate(0); }
+  100% { transform: translate3d(100px,110vh,0) rotate(600deg); }
+}
+
+.scene {
+  display: none;
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  animation: sceneIn 1s ease both;
+}
+
+.scene.active { display: flex; }
+
+@keyframes sceneIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.gold-line {
+  width: 70px;
+  height: 1px;
+  background: var(--gold);
+  margin: 22px auto;
+  box-shadow: 0 0 12px var(--gold);
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.script {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+.gold-text {
+  background: linear-gradient(120deg,#a77a42,#f8e5b5,#c39754);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* OPENING */
+
+#opening {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 55%,#63213b 0%,#30101f 42%,#10070c 100%);
+  padding: 30px 18px;
+}
+
+.opening-content {
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.opening-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px,9vw,82px);
+  font-weight: 500;
+  line-height: 1.02;
+  margin: 18px 0;
+}
+
+.opening-content .sub {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #d9c1c5;
+}
+
+.envelope-wrap {
+  width: min(300px,80vw);
+  height: 205px;
+  margin: 50px auto 36px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.envelope {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(145deg,#9b5263,#5b1a34);
+  border: 1px solid #d5ae72;
+  border-radius: 5px;
+  box-shadow: 0 25px 80px #0009, 0 0 40px #b57b5130;
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg,transparent 49%,#7e354c 50%);
+  clip-path: polygon(0 0,100% 0,50% 57%);
+  transform-origin: top;
+  transition: transform 1s ease;
+  z-index: 4;
+}
+
+.envelope:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(35deg,#411325,#8b3b53);
+  clip-path: polygon(0 100%,50% 43%,100% 100%);
+  z-index: 3;
+}
+
+.envelope.open:before {
+  transform: rotateX(180deg);
+}
+
+.letter-inside {
+  position: absolute;
+  width: 82%;
+  height: 80%;
+  left: 9%;
+  top: 8%;
+  background: #f5e7cf;
+  color: #6c263b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond',serif;
+  font-size: 22px;
+  transition: transform 1s ease;
+  z-index: 2;
+}
+
+.envelope.open .letter-inside {
+  transform: translateY(-110px);
+}
+
+.seal {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: radial-gradient(circle at 30% 30%,#f5dba7,#9a6336);
+  border: 2px solid #f4dba8;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  color: #64233a;
+  font-size: 22px;
+  box-shadow: 0 0 20px #d6b47780;
+  transition: opacity .5s;
+}
+
+.envelope.open .seal { opacity: 0; }
+
+.main-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid var(--gold);
+  background: linear-gradient(120deg,#6a2039,#9c4359);
+  color: #fff1d9;
+  padding: 15px 28px;
+  letter-spacing: 2px;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 0 25px #c89a5830;
+  transition: .3s;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px #e4bb7960;
+}
+
+.main-btn:disabled { opacity: .5; }
+
+.opening-note {
+  font-size: 10px;
+  color: #c6aab2;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+/* MUSIC */
+
+.music-control {
+  position: fixed;
+  right: 17px;
+  top: 17px;
+  z-index: 20;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #d7b47780;
+  background: #381523d9;
+  color: var(--gold-light);
+  cursor: pointer;
+  display: none;
+  place-items: center;
+  font-size: 17px;
+  backdrop-filter: blur(10px);
+}
+
+.music-control.show { display: grid; }
+
+.music-control.playing {
+  animation: musicPulse 2s infinite;
+}
+
+@keyframes musicPulse {
+  50% { box-shadow: 0 0 0 8px #d7b47715,0 0 22px #d7b47760; }
+}
+
+/* WELCOME */
+
+#welcome {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 22px;
+  background:
+    radial-gradient(ellipse at 50% 40%,#61233b,#260e1a 65%,#10070c);
+}
+
+.welcome-inner {
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-inner h2 {
+  font-family: 'Cormorant Garamond',serif;
+  font-size: clamp(44px,9vw,88px);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 25px 0;
+}
+
+.welcome-inner p {
+  max-width: 550px;
+  margin: auto;
+  color: #e0cbd0;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 300;
+}
+
+.scroll-hint {
+  margin-top: 45px;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 3px;
+  animation: bob 2s infinite;
+}
+
+@keyframes bob {
+  50% { transform: translateY(8px); }
+}
+
+/* LETTER */
+
+#letter {
+  justify-content: center;
+  align-items: center;
+  padding: 85px 20px;
+  background:
+    radial-gradient(ellipse at center,#532034,#1b0b13 75%);
+}
+
+.letter-card {
+  width: min(760px,100%);
+  padding: clamp(30px,7vw,75px);
+  background: linear-gradient(145deg,#f6ead6,#ead6b9);
+  color: #512238;
+  position: relative;
+  box-shadow: 0 30px 100px #0008;
+  border: 1px solid #d4b27b;
+}
+
+.letter-card:before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid #b58c5a80;
+  pointer-events: none;
+}
+
+.letter-card h2 {
+  font-family: 'Cormorant Garamond',serif;
+  font-size: clamp(35px,7vw,60px);
+  text-align: center;
+  font-weight: 500;
+  margin: 15px 0 30px;
+}
+
+.letter-card .letter-body {
+  font-size: 14px;
+  line-height: 2.2;
+  text-align: justify;
+  position: relative;
+}
+
+.letter-card .sign {
+  text-align: right;
+  font-family: 'Cormorant Garamond',serif;
+  font-style: italic;
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.section-footer {
+  margin-top: 38px;
+  text-align: center;
+}
+
+/* GALLERY */
+
+#memories {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 95px 20px 80px;
+  background:
+    radial-gradient(ellipse at 50% 0%,#602039,#210d17 65%,#12080e);
+}
+
+#memories.active { display: flex; }
+
+.section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-heading h2 {
+  font-family: 'Cormorant Garamond',serif;
+  font-size: clamp(42px,8vw,70px);
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.section-heading p {
+  font-size: 13px;
+  color: #d7c1c8;
+  line-height: 2;
+}
+
+.gallery {
+  width: min(1000px,100%);
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.photo-card {
+  padding: 11px 11px 18px;
+  background: linear-gradient(145deg,#f5e7d0,#d9c09b);
+  transform: rotate(var(--rotation));
+  box-shadow: 0 15px 40px #0008;
+  transition: transform .5s,box-shadow .5s;
+}
+
+.photo-card:hover {
+  transform: rotate(0) translateY(-8px);
+  box-shadow: 0 25px 50px #000a;
+}
+
+.photo-frame {
+  height: 230px;
+  overflow: hidden;
+  background: linear-gradient(135deg,#713149,#311421);
+  position: relative;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .8s;
+}
+
+.photo-card:hover img { transform: scale(1.07); }
+
+.photo-frame img:not([src]),
+.photo-frame img[src=""] { display: none; }
+
+.photo-caption {
+  text-align: center;
+  color: #57253a;
+  font-family: 'Cormorant Garamond',serif;
+  font-size: 21px;
+  padding-top: 12px;
+}
+
+.photo-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #e9d0ac;
+  text-align: center;
+  gap: 8px;
+  font-family: 'Cormorant Garamond',serif;
+  font-size: 20px;
+}
+
+.photo-fallback span { font-size: 30px; }
+
+/* WISHES */
+
+#wishes {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 20px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center,#5a1e37,#1b0a13 75%);
+}
+
+#wishes.active { display: flex; }
+
+.wishes-grid {
+  width: min(850px,100%);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.wish {
+  min-height: 150px;
+  padding: 20px 12px;
+  border: 1px solid #d7b47750;
+  background: linear-gradient(145deg,#ffffff08,#d7b47708);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  transition: .4s;
+  backdrop-filter: blur(5px);
+}
+
+.wish:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  background: #d7b47712;
+}
+
+.wish .number {
+  font-family: 'Cormorant Garamond',serif;
+  font-size: 28px;
+  color: var(--gold);
+}
+
+.wish p {
+  font-size: 12px;
+  color: #f0dfe0;
+  line-height: 1.8;
+}
+
+/* ENDING */
+
+#ending {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 90px 20px;
+  background:
+    radial-gradient(ellipse at 50% 45%,#612038,#210b16 65%,#10070c);
+}
+
+#ending.active { display: flex; }
+
+.flower-heart {
+  width: min(340px,85vw);
+  height: 300px;
+  position: relative;
+  margin: 15px auto 30px;
+  display: grid;
+  place-items: center;
+}
+
+.heart-flower {
+  position: absolute;
+  font-size: 18px;
+  filter: drop-shadow(0 0 8px #e6a6ad);
+  animation: bloom 2s ease both;
+}
+
+@keyframes bloom {
+  from { opacity: 0; transform: scale(0); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.ending-title {
+  font-family: 'Cormorant Garamond',serif;
+  font-size: clamp(43px,9vw,78px);
+  font-weight: 500;
+  line-height: 1.05;
+  margin: 10px 0 20px;
+}
+
+.ending-text {
+  max-width: 570px;
+  color: #e0c9d0;
+  font-size: 13px;
+  line-height: 2.2;
+}
+
+.final-sign {
+  font-family: 'Cormorant Garamond',serif;
+  font-size: 27px;
+  font-style: italic;
+  color: var(--gold-light);
+  margin-top: 30px;
+}
+
+.footer-note {
+  margin-top: 65px;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #b89aa6;
+}
+
+/* NAVIGATION */
+
+.nav-dots {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  display: none;
+  gap: 9px;
+  padding: 10px 15px;
+  background: #180a12bb;
+  border: 1px solid #d7b47740;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.nav-dots.show { display: flex; }
+
+.nav-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: #8e6878;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-dot.active {
+  background: var(--gold);
+  box-shadow: 0 0 10px var(--gold);
+  transform: scale(1.3);
+}
+
+.page-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #d7b47780;
+  color: var(--gold-light);
+  padding: 13px 22px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.secondary-btn:hover {
+  background: #d7b47718;
+  border-color: var(--gold);
+}
+
+@media(max-width:760px) {
+  .gallery { grid-template-columns: repeat(2,1fr); gap: 15px; }
+  .photo-frame { height: 190px; }
+  .wishes-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(max-width:430px) {
+  .gallery { gap: 12px; }
+  .photo-card { padding: 7px 7px 12px; }
+  .photo-frame { height: 150px; }
+  .photo-caption { font-size: 17px; }
+  .wishes-grid { gap: 10px; }
+  .wish { min-height: 135px; padding: 15px 8px; }
+  .letter-card .letter-body { font-size: 13px; }
+  .envelope-wrap { height: 180px; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+<div id="petals"></div>
+
+<audio id="backgroundMusic" loop preload="none">
+  <source src="nhac.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-control" id="musicButton" onclick="toggleMusic()" aria-label="Bật hoặc tắt nhạc">♫</button>
+
+<div class="nav-dots" id="navDots">
+  <button class="nav-dot active" onclick="goTo('welcome')" aria-label="Trang mở đầu"></button>
+  <button class="nav-dot" onclick="goTo('letter')" aria-label="Lá thư"></button>
+  <button class="nav-dot" onclick="goTo('memories')" aria-label="Kỷ niệm"></button>
+  <button class="nav-dot" onclick="goTo('wishes')" aria-label="Lời chúc"></button>
+  <button class="nav-dot" onclick="goTo('ending')" aria-label="Kết thúc"></button>
+</div>
+
+<!-- 01: OPENING -->
+
+<section class="scene active" id="opening">
+  <div class="opening-content">
+    <div class="eyebrow">A special gift from class 8C5</div>
+
+    <h1 class="gold-text">A Letter<br>of Gratitude</h1>
+
+    <div class="gold-line"></div>
+
+    <p class="sub">20 · 11 · 2026</p>
+
+    <div class="envelope-wrap">
+      <div class="envelope" id="envelope">
+        <div class="letter-inside">
+          <span>Gửi cô kính yêu</span>
+          <span style="font-size:13px;margin-top:8px">With love, 8C5</span>
+        </div>
+        <div class="seal">♡</div>
+      </div>
+    </div>
+
+    <button class="main-btn" id="openButton" onclick="openLetter()">
+      <span>✧</span> MỞ PHONG THƯ <span>✧</span>
+    </button>
+
+    <p class="opening-note">A LITTLE GIFT · A LOT OF LOVE</p>
+  </div>
+</section>
+
+<!-- 02: WELCOME -->
+
+<section class="scene" id="welcome">
+  <div class="welcome-inner">
+    <div class="eyebrow">Vietnamese Teachers' Day · 20.11.2026</div>
+
+    <h2 class="gold-text">Dành tặng<br>người lái đò thầm lặng</h2>
+
+    <div class="gold-line"></div>
+
+    <p>
+      Có những điều đôi khi chúng em chưa kịp nói,
+      có những tình cảm chẳng thể diễn tả hết bằng lời.
+      Hôm nay, tập thể 8C5 muốn gửi đến cô một món quà nhỏ,
+      thay cho tất cả yêu thương và lòng biết ơn chân thành.
+    </p>
+
+    <div class="scroll-hint">MỘT HÀNH TRÌNH NHỎ ĐANG CHỜ CÔ ↓</div>
+
+    <div class="page-actions">
+      <button class="main-btn" onclick="goTo('letter')">ĐỌC LÁ THƯ ♡</button>
+    </div>
+  </div>
+</section>
+
+<!-- 03: LETTER -->
+
+<section class="scene" id="letter">
+  <article class="letter-card">
+    <div class="eyebrow" style="text-align:center;color:#9a7044">To our beloved teacher</div>
+
+    <h2>Gửi cô kính yêu!</h2>
+
+    <div class="gold-line"></div>
+
+    <div class="letter-body">
+      <p>
+        Cô kính mến!
+      </p>
+
+      <p style="margin-top:18px">
+        Tháng Mười Một lại về, mang theo những yêu thương và
+        lời tri ân dành tặng những người đã tận tâm dìu dắt
+        chúng em trên hành trình trưởng thành.
+      </p>
+
+      <p style="margin-top:18px">
+        Chúng em biết rằng phía sau mỗi bài giảng là biết bao
+        tâm huyết, phía sau mỗi lời nhắc nhở là sự quan tâm,
+        và phía sau những bước tiến của chúng em luôn có
+        bóng dáng tận tụy của cô.
+      </p>
+
+      <p style="margin-top:18px">
+        Có thể đôi lúc chúng em còn nghịch ngợm, chưa thật
+        ngoan và vẫn khiến cô phải lo lắng. Nhưng chúng em
+        luôn trân trọng những điều cô đã dành cho lớp.
+        Cảm ơn cô vì đã kiên nhẫn, yêu thương và đồng hành
+        cùng chúng em trong những năm tháng học trò đáng nhớ.
+      </p>
+
+      <p style="margin-top:18px">
+        Nhân ngày Nhà giáo Việt Nam 20/11, tập thể lớp 8C5
+        kính chúc cô luôn mạnh khỏe, hạnh phúc và giữ mãi
+        ngọn lửa nhiệt huyết với nghề. Mong rằng mỗi ngày
+        đến trường của cô đều là một ngày thật vui.
+      </p>
+
+      <p style="margin-top:18px">
+        Chúng em sẽ luôn ghi nhớ những bài học, những lời
+        chỉ bảo và tình yêu thương mà cô đã dành cho mình.
+      </p>
+    </div>
+
+    <div class="sign">Thương gửi cô,<br>Tập thể lớp 8C5 ♡</div>
+
+    <div class="section-footer">
+      <button class="main-btn" onclick="goTo('memories')">TIẾP TỤC HÀNH TRÌNH →</button>
+    </div>
+  </article>
+</section>
+
+<!-- 04: MEMORIES -->
+
+<section class="scene" id="memories">
+  <div class="section-heading">
+    <div class="eyebrow">Our little memories</div>
+    <h2 class="gold-text">Những khoảnh khắc<br>không thể quên</h2>
+    <div class="gold-line"></div>
+    <p>
+      Mỗi bức ảnh là một mảnh ký ức,
+      mỗi khoảnh khắc là một điều đáng quý.
+      Cảm ơn cô vì đã là một phần trong thanh xuân của chúng em.
+    </p>
+  </div>
+
+  <div class="gallery">
+
+    <div class="photo-card" style="--rotation:-2deg">
+      <div class="photo-frame">
+        <img src="images/anh1.jpg" alt="Kỷ niệm 1" onerror="this.style.display='none'">
+        <div class="photo-fallback"><span>♡</span>Our memory</div>
+      </div>
+      <div class="photo-caption">Một thời để nhớ</div>
+    </div>
+
+    <div class="photo-card" style="--rotation:2deg">
+      <div class="photo-frame">
+        <img src="images/anh2.jpg" alt="Kỷ niệm 2" onerror="this.style.display='none'">
+        <div class="photo-fallback"><span>✧</span>Beautiful days</div>
+      </div>
+      <div class="photo-caption">Những ngày bên nhau</div>
+    </div>
+
+    <div class="photo-card" style="--rotation:1deg">
+      <div class="photo-frame">
+        <img src="images/anh3.jpg" alt="Kỷ niệm 3" onerror="this.style.display='none'">
+        <div class="photo-fallback"><span>♡</span>Our class</div>
+      </div>
+      <div class="photo-caption">Gia đình 8C5</div>
+    </div>
+
+    <div class="photo-card" style="--rotation:-2deg">
+      <div class="photo-frame">
+        <img src="images/anh4.jpg" alt="Kỷ niệm 4" onerror="this.style.display='none'">
+        <div class="photo-fallback"><span>✿</span>Sweet moments</div>
+      </div>
+      <div class="photo-caption">Khoảnh khắc thân thương</div>
+    </div>
+
+    <div class="photo-card" style="--rotation:2deg">
+      <div class="photo-frame">
+        <img src="images/anh5.jpg" alt="Kỷ niệm 5" onerror="this.style.display='none'">
+        <div class="photo-fallback"><span>♡</span>Forever grateful</div>
+      </div>
+      <div class="photo-caption">Cảm ơn cô</div>
+    </div>
+
+    <div class="photo-card" style="--rotation:-1deg">
+      <div class="photo-frame">
+        <img src="images/anh6.jpg" alt="Kỷ niệm 6" onerror="this.style.display='none'">
+        <div class="photo-fallback"><span>✧</span>Our journey</div>
+      </div>
+      <div class="photo-caption">Thanh xuân rực rỡ</div>
+    </div>
+
+  </div>
+
+  <div class="section-footer">
+    <button class="main-btn" onclick="goTo('wishes')">NHỮNG LỜI CHÚC GỬI CÔ →</button>
+  </div>
+</section>
+
+<!-- 05: WISHES -->
+
+<section class="scene" id="wishes">
+  <div class="section-heading">
+    <div class="eyebrow">Eight wishes · One big love</div>
+    <h2 class="gold-text">Tám lời chúc<br>từ trái tim 8C5</h2>
+    <div class="gold-line"></div>
+    <p>
+      Tám lời chúc nhỏ, gửi gắm tám điều tốt đẹp
+      mà chúng em mong cô sẽ luôn có trong cuộc sống.
+    </p>
+  </div>
+
+  <div class="wishes-grid">
+    <div class="wish">
+      <div class="number">01</div>
+      <p>Chúc cô luôn mạnh khỏe.</p>
+    </div>
+    <div class="wish">
+      <div class="number">02</div>
+      <p>Chúc cô mãi hạnh phúc.</p>
+    </div>
+    <div class="wish">
+      <div class="number">03</div>
+      <p>Chúc cô luôn xinh đẹp.</p>
+    </div>
+    <div class="wish">
+      <div class="number">04</div>
+      <p>Chúc cô thật nhiều niềm vui.</p>
+    </div>
+    <div class="wish">
+      <div class="number">05</div>
+      <p>Chúc cô luôn bình an.</p>
+    </div>
+    <div class="wish">
+      <div class="number">06</div>
+      <p>Chúc cô gặp nhiều may mắn.</p>
+    </div>
+    <div class="wish">
+      <div class="number">07</div>
+      <p>Chúc cô luôn thành công.</p>
+    </div>
+    <div class="wish">
+      <div class="number">08</div>
+      <p>Chúc cô mãi yêu nghề.</p>
+    </div>
+  </div>
+
+  <div class="section-footer">
+    <button class="main-btn" onclick="goTo('ending')">ĐẾN LỜI CẢM ƠN CUỐI CÙNG ♡</button>
+  </div>
+</section>
+
+<!-- 06: ENDING -->
+
+<section class="scene" id="ending">
+  <div class="eyebrow">With all our love</div>
+
+  <div class="flower-heart" id="flowerHeart"></div>
+
+  <h2 class="ending-title gold-text">Cảm ơn cô<br>vì tất cả!</h2>
+
+  <div class="gold-line"></div>
+
+  <p class="ending-text">
+    Cảm ơn cô vì đã đến, đã dạy dỗ, đã yêu thương
+    và đã trở thành một phần thật đẹp trong ký ức tuổi học trò.
+    Dù mai này thời gian có trôi đi, chúng em vẫn sẽ nhớ
+    những tháng ngày được học tập dưới sự dìu dắt của cô.
+  </p>
+
+  <div class="final-sign">Tập thể 8C5 thương gửi cô ♡</div>
+
+  <div class="footer-note">HAPPY VIETNAMESE TEACHERS' DAY · 20.11.2026</div>
+
+  <div class="page-actions">
+    <button class="secondary-btn" onclick="goTo('opening')">↺ XEM LẠI TỪ ĐẦU</button>
+  </div>
+</section>
+
+<script>
+/* PAGE NAVIGATION */
+
+const sceneIds = ['opening','welcome','letter','memories','wishes','ending'];
+let currentScene = 'opening';
+
+function goTo(id) {
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  document.querySelectorAll('.scene').forEach(scene => {
+    scene.classList.remove('active');
+  });
+
+  target.classList.add('active');
+  currentScene = id;
+
+  const isOpening = id === 'opening';
+  document.getElementById('musicButton').classList.toggle('show',!isOpening);
+  document.getElementById('navDots').classList.toggle('show',!isOpening);
+
+  if (id !== 'opening') {
+    const index = sceneIds.indexOf(id) - 1;
+    document.querySelectorAll('.nav-dot').forEach((dot,i) => {
+      dot.classList.toggle('active',i === index);
+    });
+  } else {
+    document.getElementById('envelope').classList.remove('open');
+    document.getElementById('openButton').disabled = false;
+    document.getElementById('openButton').innerHTML = '<span>✧</span> MỞ PHONG THƯ <span>✧</span>';
+  }
+
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* OPEN LETTER + MUSIC */
+
+const music = document.getElementById('backgroundMusic');
+const musicButton = document.getElementById('musicButton');
+
+function openLetter() {
+  const envelope = document.getElementById('envelope');
+  const button = document.getElementById('openButton');
+
+  if (button.disabled) return;
+
+  button.disabled = true;
+  button.innerHTML = 'ĐANG MỞ PHONG THƯ...';
+
+  envelope.classList.add('open');
+
+  music.volume = 0.55;
+  music.play().then(() => {
+    musicButton.classList.add('playing');
+    musicButton.textContent = '♫';
+  }).catch(() => {
+    musicButton.textContent = '♪';
+  });
+
+  setTimeout(() => {
+    goTo('welcome');
+  },1600);
+}
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play().then(() => {
+      musicButton.classList.add('playing');
+      musicButton.textContent = '♫';
+    }).catch(() => {
+      alert('Không thể phát nhạc. Hãy kiểm tra file nhac.mp3 nhé!');
+    });
+  } else {
+    music.pause();
+    musicButton.classList.remove('playing');
+    musicButton.textContent = '♪';
+  }
+}
+
+/* FLOATING PETALS */
+
+const petalsContainer = document.getElementById('petals');
+const petalSymbols = ['✿','❀','❁','✧','♡'];
+
+for (let i=0;i<23;i++) {
+  const petal = document.createElement('span');
+  petal.className = 'petal';
+  petal.textContent = petalSymbols[Math.floor(Math.random()*petalSymbols.length)];
+  petal.style.left = Math.random()*100+'%';
+  petal.style.fontSize = (10+Math.random()*13)+'px';
+  petal.style.animationDuration = (10+Math.random()*15)+'s';
+  petal.style.animationDelay = (-Math.random()*20)+'s';
+  petalsContainer.appendChild(petal);
+}
+
+/* GOLDEN PARTICLES */
+
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let particles = [];
+
+function resizeCanvas() {
+  const ratio = Math.min(window.devicePixelRatio || 1,2);
+  canvas.width = window.innerWidth*ratio;
+  canvas.height = window.innerHeight*ratio;
+  ctx.setTransform(ratio,0,0,ratio,0,0);
+}
+
+function createParticles() {
+  particles = [];
+  const count = Math.min(65,Math.floor(window.innerWidth/6));
+
+  for (let i=0;i<count;i++) {
+    particles.push({
+      x:Math.random()*window.innerWidth,
+      y:Math.random()*window.innerHeight,
+      r:Math.random()*1.7+.3,
+      speed:Math.random()*.25+.05,
+      alpha:Math.random()*.65+.15,
+      phase:Math.random()*Math.PI*2
+    });
+  }
+}
+
+function animateParticles() {
+  ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
+
+  particles.forEach(p => {
+    p.y -= p.speed;
+    p.phase += .015;
+
+    if (p.y < -5) {
+      p.y = window.innerHeight+5;
+      p.x = Math.random()*window.innerWidth;
+    }
+
+    const glow = p.alpha*(.65+.35*Math.sin(p.phase));
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle = `rgba(235,195,120,${glow})`;
+    ctx.shadowBlur = 9;
+    ctx.shadowColor = '#e6c27e';
+    ctx.fill();
+  });
+
+  ctx.shadowBlur = 0;
+  requestAnimationFrame(animateParticles);
+}
+
+resizeCanvas();
+createParticles();
+animateParticles();
+
+window.addEventListener('resize',() => {
+  resizeCanvas();
+  createParticles();
+});
+
+/* FLOWER HEART */
+
+const flowerHeart = document.getElementById('flowerHeart');
+
+function createFlowerHeart() {
+  const width = 340;
+  const height = 300;
+  const total = 180;
+
+  for (let i=0;i<total;i++) {
+    const t = Math.PI*2*i/total;
+
+    const x = 16*Math.pow(Math.sin(t),3);
+    const y = 13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t);
+
+    const flower = document.createElement('span');
+    flower.className = 'heart-flower';
+
+    const emojis = ['🌹','🌸','🌺','🌷','✿','💗'];
+    flower.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+
+    flower.style.left = (width/2+x*8.2)+'px';
+    flower.style.top = (height/2-y*8.2)+'px';
+    flower.style.transform = 'translate(-50%,-50%)';
+    flower.style.fontSize = (11+Math.random()*9)+'px';
+    flower.style.animationDelay = (Math.random()*1.8)+'s';
+
+    flowerHeart.appendChild(flower);
+  }
+}
+
+createFlowerHeart();
+</script>
+
+</body>
+</html>
+
